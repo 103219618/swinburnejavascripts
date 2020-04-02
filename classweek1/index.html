@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="content">Random Text</div>
+    <div id="content1">Random Text</div>
+
+    <button id="theButton">Hello World</button>
+
+
+    <script type="text/javascript">
+        let content = document.getElementById("content");
+        let myButton = document.getElementById("content");
+        
+        myButton.onclick = onMyButtonClick;
+        function onMyButtonClick() {
+            content.innerHTML = "Boo!!";
+        }
+
+        onMyButtonClick();
+
+    </script>
+
+</body>
+
+</html>
