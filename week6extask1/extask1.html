@@ -4,11 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Extension Task 1</title>
+    <link rel="stylesheet" href="extask1.css">
 </head>
 
 <body>
-    
+    <div>
+        <input type="number" id="field1">
+        <p class="plus">+</p>
+        <input type="number" id="field2">
+        <button id="calculate">Click me please.</button>
+        <br>
+        <p id="result">Value: </p>
+    </div>
+    ​
+    <script type="text/javascript">
+        function add_number() {
+            var box1 = parseFloat(document.getElementById("field1").value);
+            var box2 = parseFloat(document.getElementById("field2").value);
+            var result = box1 + box2;
+            document.getElementById("result").innerHTML = "Value: " + result;
+        }
+        calculate.onclick = add_number;
+    </script>
+
 </body>
 
 </html>
