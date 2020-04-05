@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extension Task 2</title>
 </head>
+
 <body>
-    
+    <div>
+        <input type="number" id="field1" name="field1">
+        <select id="options">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">X</option>
+            <option value="divide">/</option>
+            <option value="Meh">Meh</option>
+        </select> <input type="number" id="field2" name="field2">
+    </div>
+    <button id="calculate">Click me please.</button>
+    <br></br>
+    <p id="result">Value:</p>
+
+    <script type="text/javascript">
+
+        calculate.onclick = calc
+
+        function calc() {
+            var field1 = parseFloat(document.getElementById("field1").value);
+            var field2 = parseFloat(document.getElementById("field2").value);
+            var operation = (document.getElementById("options").value);
+
+            if (operation == "plus") {
+                document.getElementById("result").innerHTML = field1 + field2;
+            }
+
+            if (operation == "minus") {
+                document.getElementById("result").innerHTML = field1 - field2;
+            }
+
+            if (operation == "multiply") {
+                document.getElementById("result").innerHTML = field1 * field2;
+            }
+
+            if (operation == "divide") {
+                document.getElementById("result").innerHTML = field1 / field2;
+            }
+
+            if (operation == "Meh") {
+                document.alert = alert("Whoa there buddy, stop playing around with me, that is not an operation!");
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
