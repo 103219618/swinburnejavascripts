@@ -9,23 +9,30 @@
 </head>
 
 <body>
-    <div class="addtolist">
-        <input type="string" id="field" name="field" value="New item..." class="inputfield">
-        <button id="addbutton" class="addbutton">Add</button>
-    </div>
+    <div class="container">
+        <div class="addtolist">
+            <input type="string" id="field" name="field" value="New item..." class="inputfield">
+            <button id="addbutton" class="abutton">Add</button>
+        </div>
 
-    <div class="list" id="list">
-
-
-
+        <div class="list" id="list">
+            <h1>Testing...</h1>
+        </div>
     </div>
 
 
     <script type="text/javascript">
         let addbutton = document.getElementById("addbutton");
-        let field = document.getElementById("field");
+        
         let list = document.getElementById("list");
 
+        addbutton.onclick = function () {
+            let myNewElement = document.createElement("div");
+            let myNewElementText = document.createTextNode("Testing...");
+            myNewElement.appendChild = (myNewElementText);
+            elements.appendChild(myNewElement);
+            console.log(myNewElement)
+        }
 
 
     </script>
