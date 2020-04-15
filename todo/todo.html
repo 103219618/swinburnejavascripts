@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript To Do!</title>
     <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="addtolist">
-            <input type="string" id="field" name="field" value="New item..." class="inputfield">
-            <button id="addbutton" class="abutton">Add</button>
+            <input type="text" id="field" name="field" placeholder="New item..." class="inputfield">
+            <button id="addButton" class="abutton">Add</button>
         </div>
 
-        <div class="list" id="list">
-            <h1>Testing...</h1>
+        <div class="elements" id="elements">
+
         </div>
     </div>
 
-
     <script type="text/javascript">
-        let addbutton = document.getElementById("addbutton");
-        
-        let list = document.getElementById("list");
+        let addButton = document.getElementById("addButton");
+        let elements = document.getElementById("elements");
+        let field = document.getElementById("field");
 
-        addbutton.onclick = function () {
+
+        addButton.onclick = function () {
             let myNewElement = document.createElement("div");
-            let myNewElementText = document.createTextNode("Testing...");
-            myNewElement.appendChild = (myNewElementText);
+            let myNewElementText = document.createTextNode(document.getElementById("field").value);
+            myNewElement.appendChild(myNewElementText);
             elements.appendChild(myNewElement);
-            console.log(myNewElement)
+            myNewElement.style.backgroundColor = "#f7f5f5";
+            myNewElement.style.fontSize = "20px";
+
+            myNewElement.onmouseover = function () {
+                myNewElement.style.backgroundColor = "darkgrey";
+                myNewElement.style.fontSize = "21px";
+            }
+
+            myNewElement.onmouseout = function () {
+                myNewElement.style.backgroundColor = "#f7f5f5";
+                myNewElement.style.fontSize = "20px";
+            }
+
+
         }
 
 
