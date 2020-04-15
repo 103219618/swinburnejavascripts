@@ -1,0 +1,12 @@
+.inputfield {
+    border-radius: 5px;
+    height: 20px;
+    width: 200px;
+    color: grey;
+    
+}
+
+.addbutton {
+    border-radius: 5px;
+    background-color:lightgray;
+}
