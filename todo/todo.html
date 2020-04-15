@@ -26,18 +26,18 @@
         let elements = document.getElementById("elements");
         let field = document.getElementById("field");
 
-
         addButton.onclick = function () {
             let myNewElement = document.createElement("div");
             let myNewElementText = document.createTextNode(document.getElementById("field").value);
             myNewElement.appendChild(myNewElementText);
             elements.appendChild(myNewElement);
+            document.getElementById("field").value = ""
             myNewElement.style.backgroundColor = "#f7f5f5";
             myNewElement.style.fontSize = "20px";
             myNewElement.style.marginBottom = "10px";
             myNewElement.style.borderRadius = "5px";
-            myNewElement.style.height = "40px";
-            myNewElement.style.padding = "25px 20px 10px 20px";
+            myNewElement.style.height = "40px, auto";
+            myNewElement.style.padding = "20px 20px 20px 20px";
 
             myNewElement.onmouseover = function () {
                 myNewElement.style.backgroundColor = "darkgrey";
