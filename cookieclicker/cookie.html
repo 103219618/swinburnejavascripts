@@ -32,7 +32,7 @@
         <img src="mousepointer.png" id="pointerImage">
         <figcaption id="pointerValue">Upgrade Value: 10 Cookies</figcaption>
         <div id="upgradesPurchased">
-            <h1>List of Upgrades Purchased:</h1>
+            <h2>List of Upgrades Purchased:</h2>
         </div>
 
     </div>
@@ -61,7 +61,8 @@
                 numberOfCookies.innerHTML = "Cookies: " + cookieCounter;
                 let newdiv = document.createElement("div");
                 upgradePurchased.appendChild(newdiv);
-                upgradesPurchased.innerHTML += "Purchased " + upgradeCounter;
+                upgradesPurchased.innerHTML += "Purchased Level " + upgradeCounter++;
+                console.log(newdiv);
 
 
                 setInterval(function () {

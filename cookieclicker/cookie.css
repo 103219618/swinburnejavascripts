@@ -22,7 +22,7 @@ body {
 }
 
 #numberOfCookies {
-    background-color: green;
+    background-color: brown;
     border: dotted;
     border-radius: 10px;
     font-weight: bold;
@@ -31,7 +31,7 @@ body {
 }
 
 #numberOfCookiesPerSecond {
-    background-color: red;
+    background-color: burlywood;
     border: dotted;
     border-radius: 10px;
     font-size: x-large;
