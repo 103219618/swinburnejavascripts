@@ -1,0 +1,77 @@
+body {
+    background-color: pink;
+}
+
+.font {
+    font-family: 'Roboto Slab', serif;
+}
+
+#pageheader {
+    color: chocolate;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#scoreboard {
+    border: solid;
+    border-radius: 10px;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 80%;
+}
+
+#numberOfCookies {
+    background-color: green;
+    border: dotted;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: x-large;
+    margin: 5px;
+}
+
+#numberOfCookiesPerSecond {
+    background-color: red;
+    border: dotted;
+    border-radius: 10px;
+    font-size: x-large;
+    margin: 5px;
+}
+
+#cookie {
+    width: 49%;
+    border: solid;
+    border-radius: 10px;
+    height: 520px;
+    float: left;
+    text-align: center;
+}
+
+#cookieImage {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+#upgrades {
+    width: 49%;
+    border: solid;
+    border-radius: 10px;
+    height: 520px;
+    float: right;
+    text-align: center;
+}
+
+#pointerImage {
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+#upgradesPurchased {
+    border: dotted;
+    border-radius: 10px;
+    margin: 10px;
+}
+

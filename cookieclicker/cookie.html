@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="cookie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body class="font">
+
+    <div id="pageheader">
+        <h1>Cookie Clicker</h1>
+    </div>
+
+    <div id="scoreboard">
+        <h1>Scoreboard:</h1>
+        <p id=numberOfCookies>Cookies: 0</p>
+        <p id=numberOfCookiesPerSecond>per second: 0</p>
+    </div>
+
+    <div id="cookie">
+        <h1>Click the Cookie!</h1>
+        <img src="ck.jpeg" id="cookieImage">
+        <figcaption>(Mr. Cookie!)</figcaption>
+    </div>
+
+    <div id="upgrades">
+        <h1>Upgrades</h1>
+        <img src="mousepointer.png" id="pointerImage">
+        <figcaption id="pointerValue">Upgrade Value: 10 Cookies</figcaption>
+        <div id="upgradesPurchased">
+            <h1>List of Upgrades Purchased:</h1>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        let numberOfCookies = document.getElementById("numberOfCookies");
+        let numberOfCookiesPerSecond = document.getElementById("numberOfCookiesPerSecond");
+        let cookieImage = document.getElementById("cookieImage");
+        let pointerImage = document.getElementById("pointerImage");
+        let upgradePurchased = document.getElementById("upgradesPurchased");
+        let upgraded = document.getElementById("upgraded");
+        let cookie = document.getElementById("cookie");
+        let pointerValue = document.getElementById("pointerValue");
+
+        let cookieCounter = 0;
+        let cookieCounterPerSecond = 0;
+        let buyingAbility = 10;
+        let upgradeCounter = 1;
+
+        pointerImage.onclick = function upgradepointer() {
+            if (cookieCounter >= buyingAbility) {
+                cookieCounterPerSecond += 1
+                numberOfCookiesPerSecond.innerHTML = "per second " + cookieCounterPerSecond;
+                cookieCounter -= buyingAbility;
+                numberOfCookies.innerHTML = "Cookies: " + cookieCounter;
+                let newdiv = document.createElement("div");
+                upgradePurchased.appendChild(newdiv);
+                upgradesPurchased.innerHTML += "Purchased " + upgradeCounter;
+
+
+                setInterval(function () {
+                    cookieCounter += cookieCounterPerSecond;
+                    numberOfCookiesPerSecond.innerHTML = "per second " + cookieCounterPerSecond;
+                    numberOfCookies.innerHTML = "Cookies: " + cookieCounter;
+
+
+                }, 1000);
+                buyingAbility += 10;
+                pointerValue.innerHTML = "Upgrade Value: " + buyingAbility + " Cookies";
+
+            }
+
+
+        }
+
+        cookieImage.onclick = function cookieClick() {
+            cookieCounter += 1;
+            numberOfCookies.innerHTML = "Cookies: " + cookieCounter;
+            console.log(cookieCounter);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
